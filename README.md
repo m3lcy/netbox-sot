@@ -1,7 +1,7 @@
 # Netbox-Config-Engine
 
-<font color="red"> NOTE </font> <BR>
-I am currently rebuilding this project from the ground up to improve the architecture, performance and for better adaptability when implementing with other projects. Everything under here is the old architecture i did a couple months back and will be taken down slowly and rebuilt.
+> [!NOTE]
+> I am currently rebuilding this project from the ground up to improve the architecture, performance and for better adaptability when implementing with other projects. Everything under here is the old architecture i did a couple months back and will be taken down slowly and rebuilt.
 
 ## Overview
 
