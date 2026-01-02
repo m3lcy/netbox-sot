@@ -1,5 +1,8 @@
 # Netbox-Config-Engine
 
+[!NOTE]
+I am currently rebuilding this project from the ground up to improve the architecture, performance and for better adaptability when implementing with other projects. Everything under here is the old architecture i did a couple months back and will be taken down slowly and rebuilt.
+
 ## Overview
 
 The Netbox Configuration Engine builds on concepts and workflows from a previous [Enterprise Automation Network](https://github.com/m3lcy/Enterprise-network) I designed, which simulated a high-availability automated infrastructure. In this follow-up project, I focused on extending those concepts into a more modern, production-style network automation workflow.
