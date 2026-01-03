@@ -1,4 +1,4 @@
-# Netbox-Config-Engine
+# NetBox - Source of Truth
 
 > [!NOTE]
 > Being REVAMPED. Work in progress
