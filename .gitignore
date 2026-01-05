@@ -2,3 +2,5 @@ logs/
 .env
 venv/
 tests/
+modules/__pycache__
+scripts/__pycache__
