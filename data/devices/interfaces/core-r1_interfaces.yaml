@@ -1,0 +1,40 @@
+interfaces:
+  - name: Loopback0
+    description: "LOOPBACK - SSH / BGP"
+    ip_address: 172.16.255.1 
+    subnet_mask: 255.255.255.255
+    shutdown: false
+
+  - name: GigabitEthernet0/0
+    description: "UPLINK TO l3-sw-01 g0/1"
+    mode: routed
+    ip_address: 172.16.12.226
+    subnet_mask: 255.255.255.252
+    duplex: auto
+    speed: auto
+    shutdown: false
+
+  - name: GigabitEthernet0/1
+    description: "UPLINK TO l3-sw-02 g0/1" 
+    mode: routed
+    ip_address: 172.16.12.229
+    subnet_mask: 255.255.255.252
+    duplex: auto
+    speed: auto
+    shutdown: false
+
+  - name: Serial0/0/0
+    description: "WAN LINK TO HQ | NAT OUTSIDE"
+    mode: routed
+    ip_address: 172.17.12.1
+    subnet_mask: 255.255.255.0
+    nat_inside: false
+    clock_rate: 2000000
+    shutdown: false
+
+  - name: Serial0/0/1
+    description: "SPARE / UNUSED"
+    shutdown: true
+
+  - name: VLAN1
+    shutdown: true

@@ -1,0 +1,149 @@
+interfaces:
+  - name: Loopback0
+    description: "LOOPBACK - SSH"
+    ip_address: 172.16.255.2 
+    subnet_mask: 255.255.255.255
+    shutdown: false
+
+  - name: FastEthernet0/1
+    description: "TRUNK TO access-sw-02 fa0/1"
+    mode: trunk
+    native_vlan: 99 
+    shutdown: false
+
+  - name: FastEthernet0/2
+    description: "TRUNK TO l3-sw-02 fa0/2"
+    mode: trunk
+    shutdown: false
+
+  - name: FastEthernet0/3
+    description: "TRUNK TO l3-sw-03 fa0/3"
+    mode: trunk
+    shutdown: false
+
+  - name: FastEthernet0/5
+    description: "TRUNK TO access-sw-03 g0/1"
+    mode: trunk
+    native_vlan: 99
+    service_policy_input: VLAN30_POLICY
+    shutdown: false
+
+  - name: FastEthernet0/6
+    description: "TRUNK TO access-sw-04 fa0/1"
+    mode: trunk
+    native_vlan: 99
+    shutdown: false
+
+  - name: FastEthernet0/4
+    description: "SPARE / RESERVED FOR FUTURE USE"
+    mode: access
+    access_vlan: 999
+    shutdown: true
+
+  - name: FastEthernet0/7-24
+    description: "SPARE / RESERVED FOR FUTURE USE"
+    mode: access
+    access_vlan: 999
+    shutdown: true
+
+  - name: GigabitEthernet0/1
+    description: "UPLINK TO core-r1 g0/0"
+    mode: routed
+    ip_address: 172.16.12.225
+    subnet_mask: 255.255.255.252
+    duplex: auto 
+    speed: auto
+    shutdown: false
+
+  - name: GigabitEthernet0/2
+    description: "TRUNK TO access-sw-01 g0/1"
+    mode: trunk
+    native_vlan: 99
+    shutdown: false
+
+  - name: VLAN1
+    shutdown: true
+
+  - name: VLAN10
+    description: "VLAN10 COMPUTE"
+    ip_address: 172.16.12.1
+    subnet_mask: 255.255.255.224
+    helper_address: 172.16.12.226
+    nat_inside: true
+    shutdown: false
+    vrrp:
+      group: 10
+      ip: 172.16.12.30
+      priority: 150
+      auth_text: true
+      is_primary: true
+
+  - name: VLAN20
+    description: "VLAN20 MANAGEMENT"
+    ip_address: 172.16.12.33
+    subnet_mask: 255.255.255.224
+    helper_address: 172.16.12.226
+    nat_inside: true
+    shutdown: false
+    vrrp:
+      group: 20
+      ip: 172.16.12.62
+      priority: 150
+      auth_text: true
+      is_primary: true
+    
+  - name: VLAN30
+    description: "VLAN30 COMPUTE"
+    ip_address: 172.16.12.65
+    subnet_mask: 255.255.255.224
+    helper_address: 172.16.12.226
+    nat_inside: true
+    shutdown: false
+    vrrp:
+      group: 30
+      ip: 172.16.12.94
+      priority: 150
+      auth_text: true
+      is_primary: true
+
+  - name: VLAN100
+    description: "VLAN100 R&D"
+    ip_address: 172.16.12.129
+    subnet_mask: 255.255.255.224
+    helper_address: 172.16.12.226
+    nat_inside: true
+    shutdown: false
+    vrrp:
+      group: 100
+      ip: 172.16.12.158
+      priority: 150
+      auth_text: true
+      is_primary: true
+
+  - name: VLAN200
+    description: "VLAN200 EMPLOYEE"
+    ip_address: 172.16.12.161
+    subnet_mask: 255.255.255.224
+    helper_address: 172.16.12.226
+    nat_inside: true
+    shutdown: false
+    vrrp:
+      group: 200
+      ip: 172.16.12.190
+      priority: 150
+      auth_text: true
+      is_primary: true
+
+  - name: VLAN300
+    description: "VLAN300 GUEST"
+    ip_address: 172.16.12.193
+    subnet_mask: 255.255.255.224
+    helper_address: 172.16.12.226
+    nat_inside: true
+    shutdown: false
+    vrrp:
+      group: 300
+      ip: 172.16.12.222
+      priority: 150
+      auth_text: true
+      is_primary: true

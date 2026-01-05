@@ -1,0 +1,77 @@
+interfaces:
+  - name: FastEthernet0/1
+    description: "TRUNK TO l3-sw-01 fa0/1"
+    mode: trunk
+    native_vlan: 99 
+    shutdown: false
+
+  - name: FastEthernet0/2
+    description: "UPLINK TO CORE-USER-01"
+    mode: access
+    access_vlan: 10
+    shutdown: false
+    port_security:
+      enabled: true
+      maximum: 1
+      violation: shutdown
+      sticky: true
+
+  - name: FastEthernet0/3
+    description: "UPLINK TO CORE-USER-02"
+    mode: access
+    access_vlan: 10
+    shutdown: false
+    port_security:
+      enabled: true
+      maximum: 1
+      violation: shutdown
+      sticky: true
+
+  - name: FastEthernet0/4
+    description: "UPLINK TO CORE-USER-00"
+    mode: access
+    access_vlan: 10
+    shutdown: false
+    port_security:
+      enabled: true
+      maximum: 1
+      violation: shutdown
+      sticky: true
+
+  - name: FastEthernet0/5
+    description: "UPLINK TO CORE-USER-03"
+    mode: access
+    access_vlan: 10
+    shutdown: false
+    port_security:
+      enabled: true
+      maximum: 1
+      violation: shutdown
+      sticky: true
+
+  - name: FastEthernet0/6-24
+    description: "SPARE / RESERVED FOR FUTURE USE"
+    mode: access
+    access_vlan: 999
+    shutdown: true
+
+  - name: GigabitEthernet0/1
+    description: "TRUNK TO l3-sw-01 g0/2"
+    mode: trunk
+    native_vlan: 99
+    shutdown: false
+
+  - name: GigabitEthernet0/2
+    description: "SPARE / RESERVED FOR FUTURE USE"
+    mode: access
+    access_vlan: 999
+    shutdown: true
+
+  - name: VLAN1
+    shutdown: true
+
+  - name: VLAN20
+    description: "MANAGEMENT INTERFACE"
+    ip_address: 172.16.12.40
+    subnet_mask: 255.255.255.224
+    shutdown: false
