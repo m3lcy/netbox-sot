@@ -1,0 +1,9 @@
+role,device_type,status,site,name
+Access Switch,Cisco Catalyst 9300,active,corp-nyc-01,access-sw-01
+Access Switch,Cisco Catalyst 9300,active,corp-nyc-01,access-sw-02
+Access Switch,Cisco Catalyst 9300,active,corp-nyc-01,access-sw-03
+Access Switch,Cisco Catalyst 9300,active,corp-nyc-01,access-sw-04
+Access Point,Aironet 2802I,active,corp-nyc-01,ap-01
+L3 Switch,Cisco Catalyst 9500,active,corp-nyc-01,l3-sw-01
+L3 Switch,Cisco Catalyst 9500,active,corp-nyc-01,l3-sw-02
+Core Router,Cisco ISR 4331,active,corp-nyc-01,core-r1

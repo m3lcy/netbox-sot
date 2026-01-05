@@ -1,0 +1,9 @@
+vid,name,status,site
+10,CORE,active,corp-nyc-01
+20,MGMT,active,corp-nyc-01
+30,COMPUTE,active,corp-nyc-01
+99,NATIVE,active,corp-nyc-01
+100,R&D,active,corp-nyc-01
+200,EMPLOYEE,active,corp-nyc-01
+300,GUEST,active,corp-nyc-01
+999,BLACKHOLE,active,corp-nyc-01

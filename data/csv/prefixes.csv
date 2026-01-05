@@ -1,0 +1,8 @@
+prefix,status,description,vlan
+172.16.12.0/27,active,CORE,10
+172.16.12.32/27,active,MGMT,20
+172.16.12.64/27,active,COMPUTE,30
+172.16.12.96/27,reserved,NATIVE,99
+172.16.12.128/27,active,R&D,100
+172.16.12.160/27,active,EMPLOYEE,200
+172.16.12.192/27,active,GUEST,300
